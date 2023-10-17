@@ -1,0 +1,17 @@
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.container{
+    height: 100%; /* 100% of viewport height */
+    width: 100vw;
+    padding: 20px;
+    color: #363636;
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px; 
+    right: 10px;
+}

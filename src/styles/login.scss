@@ -1,0 +1,26 @@
+.login-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* 100% of viewport height */
+    background-color: var(--background-color);
+    color: #FFF;
+  }
+  
+  .login-form {
+    width: 300px; /* Adjust width as needed */
+  }
+
+  .append-icon {
+    position: absolute;
+    top: 72%;
+    right: 10px; /* Adjust the right distance as needed */
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--primary-color);
+  }
+
+  .error-message {
+    color: red;
+    margin-bottom: 10px;
+  }
