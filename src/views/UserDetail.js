@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import axios from 'axios';
+import { RingSpinnerOverlay } from "react-spinner-overlay"
 
 const UserDetail = () => {
     const { id } = useParams();
@@ -15,7 +16,16 @@ const UserDetail = () => {
     }, [id]);
   
     if (!user) {
-      return <div>Loading...</div>;
+      return (
+          <RingSpinnerOverlay
+            color="#e96826"
+            message={
+              <p style={{ marginTop: "12px" }}>
+                Loading...
+              </p>
+            }
+          />
+      )
     }
     const handleBack = () => {
         history.push('/users');
@@ -27,11 +37,19 @@ const UserDetail = () => {
       {user && (
       <div>
         <h1>User Details</h1>
-        <img src={user.avatar} alt="User Avatar" className="image-profile" />
-        <p>ID: {user.id}</p>
-        <p>Email: {user.email}</p>
-        <p>Full Name: {user.first_name} {user.last_name}</p>
-        <Button onClick={handleBack}>Back to Users</Button>
+        <div className="row">
+          <div className="col-xs col-md-3">
+            <img src={user.avatar} alt="User Avatar" className="image-profile" />
+          </div>
+          <div className="col-xs col-md-3">
+            <h3>{user.first_name} {user.last_name}</h3>
+            <h3>{user.id}</h3>
+            <h3>{user.email}</h3>
+          </div>
+        </div>
+        <div className="mt-4">  
+          <Button onClick={handleBack}>Back to Users</Button>
+        </div>
       </div>
       )}
     </div>
