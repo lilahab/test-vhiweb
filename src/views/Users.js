@@ -6,7 +6,6 @@ import axios from 'axios';
 import ReactDataTables from "../components/ReactDataTables";
 import "datatables.net-dt/css/jquery.dataTables.css";
 
-
 const Users = () => {
     const history = useHistory();
     const [users, setUsers] = useState([]);
@@ -21,7 +20,7 @@ const Users = () => {
             // If the 'token' exists, fetch user data
             fetchData();
         }
-    }, []);
+    });
 
     const fetchData = async () => {
         try {

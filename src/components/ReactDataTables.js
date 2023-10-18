@@ -10,7 +10,7 @@ function ReactDataTables({ data, columns }) {
 
   useEffect(() => {
     if (data && data.length > 0) {
-      const dataTable = $(tableRef.current).DataTable({
+      $(tableRef.current).DataTable({
         data: data,
         columns: columns,
         dom: 'Bfrtip',
