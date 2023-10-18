@@ -58,7 +58,7 @@ const Users = () => {
                     data-id="${val}" 
                     class="click-detail" 
                     data-action="detail"
-                    style="color: #9E9E9E; margin-right: 10px;"
+                    style="color: #9E9E9E; margin-right: 10px;z-index:999"
                 >
                     Detail
                 </a>

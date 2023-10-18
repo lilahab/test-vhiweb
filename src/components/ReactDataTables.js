@@ -23,6 +23,7 @@ function ReactDataTables({ data, columns }) {
         serverSide: false,
         processing: true,
         keys: true,
+        searching: false,
         columnDefs: [{
             targets: -1,
             sorting: false,
@@ -37,12 +38,7 @@ function ReactDataTables({ data, columns }) {
                 next: '&rsaquo;',
                 last: '&raquo;'
             },
-            // search: "Cari",
-            // info: "Menampilkan _START_ s/d _END_ dari _TOTAL_ data",
-            // infoEmpty: "Menampilkan 0 s/d 0 dari 0 data",
             processing: "<i class='fas fa-spinner fa-spin'></i> Loading....",
-            // zeroRecords: "Tidak ada data",
-            // emptyTable: "Tidak ada data ditemukan",
             lengthMenu: "_MENU_"
         },
         buttons: [],
@@ -50,7 +46,7 @@ function ReactDataTables({ data, columns }) {
     }
   }, [data, columns]);
 
-  return <table ref={tableRef}></table>;
+  return <table ref={tableRef} className="table table-bordered table-striped"></table>;
 }
 
 export default ReactDataTables;

@@ -24,15 +24,16 @@ const UserDetail = () => {
 
   return (
     <div className="container">
+      {user && (
       <div>
         <img src={user.avatar} alt="User Avatar" />
         <h1>User Details</h1>
         <p>ID: {user.id}</p>
         <p>Email: {user.email}</p>
-        <p>First Name: {user.first_name}</p>
-        <p>Last Name: {user.last_name}</p>
+        <p>Full Name: {user.first_name} {user.last_name}</p>
         <Button onClick={handleBack}>Back to Users</Button>
       </div>
+      )}
     </div>
   );
 };

@@ -39,22 +39,26 @@ function LoginPages() {
                     <Form.Group controlId="formBasicEmail" className="form-group">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control
+                            name="email"
                             type="email"
                             placeholder="Enter email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
+                            autoComplete="off"
                         />
                     </Form.Group>
 
                     <Form.Group controlId="formBasicPassword" className="form-group">
                         <Form.Label>Password</Form.Label>
                         <Form.Control
+                            name="password"
                             type={showPassword ? 'text' : 'password'} // Show/hide password
                             placeholder="Password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
+                            autoComplete="off"
                         />
                         <FaEye
                             className="append-icon"
@@ -70,7 +74,7 @@ function LoginPages() {
                         )
                     }
 
-                    <Button variant="dark" type="submit">
+                    <Button variant="outline-light" type="submit">
                         Login
                     </Button>
                 </Form>

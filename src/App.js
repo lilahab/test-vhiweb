@@ -3,7 +3,7 @@ import LoginPages from './views/LoginPages';
 import Users from './views/Users';
 import UserDetail from './views/UserDetail';
 import NotFound from './components/NotFound';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
