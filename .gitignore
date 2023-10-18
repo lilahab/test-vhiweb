@@ -24,3 +24,6 @@ yarn-error.log*
 
 .github
 
+
+# Local Netlify folder
+.netlify
