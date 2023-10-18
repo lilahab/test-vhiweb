@@ -26,8 +26,8 @@ const UserDetail = () => {
     <div className="container">
       {user && (
       <div>
-        <img src={user.avatar} alt="User Avatar" />
         <h1>User Details</h1>
+        <img src={user.avatar} alt="User Avatar" className="image-profile" />
         <p>ID: {user.id}</p>
         <p>Email: {user.email}</p>
         <p>Full Name: {user.first_name} {user.last_name}</p>

@@ -20,7 +20,7 @@ const Users = () => {
             // If the 'token' exists, fetch user data
             fetchData();
         }
-    });
+    },[history]);
 
     const fetchData = async () => {
         try {
